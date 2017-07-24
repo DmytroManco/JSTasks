@@ -23,4 +23,4 @@ function increment(num) {
 
 let arr1 = [1, 2, 3];
 
-console.log(getTransformedArray(arr1, increment));
+getTransformedArray(arr1, increment);

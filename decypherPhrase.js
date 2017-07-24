@@ -12,11 +12,11 @@ function getTransformedArray(arr, obj) {
 			theArr[index] = obj[theArr[index]];
 		}
 	});
-	return console.log(arr.join(''));
+	return arr.join('');
 }
 
 
-let cypherPhrase = function(obj, str) {
+let decypherPhrase = function(obj, str) {
 	//Just need to reverse our object:
 	let reversedObj = {};
 	for(let key in obj) {
@@ -24,7 +24,7 @@ let cypherPhrase = function(obj, str) {
 	}
 
 	let arr = str.split('');
-	getTransformedArray(arr, reversedObj);
+	return getTransformedArray(arr, reversedObj);
 };
 
 
@@ -38,4 +38,4 @@ let charactersMap = {
 
 let phrase = 'Kiggy dog';
 
-cypherPhrase(charactersMap, phrase);
+decypherPhrase(charactersMap, phrase);

@@ -17,7 +17,7 @@ function getTransformedArray(arr, obj) {
 
 let cypherPhrase = function(obj, str) {
 	let arr = str.split('');
-	getTransformedArray(arr, obj);
+	return getTransformedArray(arr, obj);
 };
 
 

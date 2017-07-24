@@ -6,11 +6,11 @@ function forEach (arr, func) {
 }
 
 // getTransformedArray
-function getTransformedArray(arr, label) {
+function getTransformedArray(arr, customFunc) {
 	let newArr = [];
 
 	forEach(arr, function(el, index, theArr){
-		let item = theArr[index][label];
+		let item = theArr[index][customFunc];
 		newArr.push(item);
 	});
 
@@ -18,7 +18,8 @@ function getTransformedArray(arr, label) {
 }
 
 function plackByAttribute(arr, label) {
-	getTransformedArray(arr, label);
+	let getLabel = (label) => label;
+	return getTransformedArray(arr, getLabel(label));
 }
 
 // Check how it works
@@ -29,4 +30,4 @@ let arr2 = [
 ];
 
 plackByAttribute(arr2, 'surname');
-plackByAttribute(arr2, 'surname');
+plackByAttribute(arr2, 'name');
